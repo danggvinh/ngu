@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayMent</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="bg-background p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold text-foreground">Nhập thông tin để xác nhận Đặt phòng và Thanh toán</h2>
+    <p class="text-muted-foreground">Vui lòng nhập thông tin chính xác.</p>
+    <form class="mt-4 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-foreground" for="first-name">First name</label>
+                <input type="text" id="first-name" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="First name" />
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-foreground" for="last-name">Last name</label>
+                <input type="text" id="last-name" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="Last name" />
+            </div>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-foreground" for="email">Email address</label>
+            <input type="email" id="email" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="Email address" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-foreground" for="number">Phone number</label>
+            <input type="number" id="phone" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="Phone number" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-foreground" for="country">Country</label>
+            <select id="country" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary">
+                <option>United States</option>
+                <option>Việt Nam</option>
+                <option>Japan</option>
+                <option>China</option>
+                <option>Laos</option>
+                <option>ThaiLand</option>
+                <option>Korea</option>
+                <option>Other</option>
+            </select>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-foreground" for="city">Thành phố</label>
+                <input type="text" id="city" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="Thành phố" />
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-foreground" for="state">Quận / Huyện</label>
+                <input type="text" id="state" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="Quận / Huyện" />
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-foreground" for="zip">Phường / Xã</label>
+                <input type="text" id="zip" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary" placeholder="Phường / Xã" />
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <label class="flex items-center">
+              <input type="radio" name="guest" value="self" class="form-radio text-primary focus:ring-primary-500" checked />
+              <span class="ml-2 text-muted-foreground">Tôi là khách lưu trú</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="guest" value="other" class="form-radio text-primary focus:ring-primary-500" />
+              <span class="ml-2 text-muted-foreground">Tôi đang đặt cho người khác</span>
+            </label>
+          </div>
+          <div class="p-6 bg-card text-foreground rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold">Chi tiết giá</h2>
+            <p class="text-sm text-muted-foreground">
+              <span class="font-bold">ℹ️</span> Mọi thắc mắc về thuế và hóa đơn, vui lòng tham khảo Điều khoản và Điều kiện của Hotel để
+              được giải đáp.
+            </p>
+            <div class="mt-4">
+              <h3 class="text-md font-medium">Giá phòng</h3>
+              <p class="text-lg font-bold">937.045 VND</p>
+              <p class="text-sm"> Phòng 2 Giường Đơn Superior (1 đêm)</p>
+            </div>
+          
+            <div class="mt-4">
+              <h3 class="text-md font-medium">Các Loại Thuế và Phí Khác</h3>
+              <p class="text-lg font-bold">134.725 VND</p>
+            </div>
+          
+            <div class="mt-4">
+              <h3 class="text-md font-medium">Tổng giá</h3>
+              <p class="text-xl font-bold">1.071.770 VND</p>
+            </div>
+            <div>
+                <label class="mt-4 text-md font-medium block" for="card">Phương thức thanh toán</label>
+                <select id="card" class="mt-1 block w-full border border-border rounded-md p-2 bg-card text-foreground focus:border-primary focus:ring focus:ring-primary">
+                    <option>Thanh toán khi nhận phòng</option>
+                    <option>Smart Banking</option>
+                </select>
+            </div>
+          
+            <a href="#" class="mt-6 inline-block bg-primary text-primary-foreground hover:bg-primary/80 py-2 px-4 rounded-lg text-center"> Thanh toán </a>
+          
+            <p class="mt-4 text-sm text-muted-foreground"><span class="font-bold">👉</span> Hãy giữ phòng này ngay trước khi nó tăng cao hơn!</p>
+          </div>
+        
+    </form>
+</div>
+  </body>
+</html>
